@@ -24,12 +24,17 @@ li {
   list-style-type: none;
 }
 
+body {
+  font-family: "Coiny", system-ui;
+  font-style: normal;
+}
+
 /* # UTILS */
 
 .container {
   margin: 0 auto;
   padding: 0 10px;
-  width: 1000px;
+  width: 1400px;
   max-width: 100%;
 }
 
@@ -61,8 +66,12 @@ li {
   color: white;
 }
 
+.card-img-container {
+  width: 30%;
+}
+
 .card-img {
-  height: 100px;
+  height: 100%;
 }
 
 .card-text {
@@ -70,15 +79,15 @@ li {
 }
 
 .card-name {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
 .card-role {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .card-contact {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgb(0, 183, 255);
 }

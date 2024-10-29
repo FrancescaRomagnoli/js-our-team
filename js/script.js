@@ -1,4 +1,4 @@
-console.log("JS OK");
+// # members array
 
 const teamMembers = [
   {
@@ -39,22 +39,35 @@ const teamMembers = [
   },
 ];
 
-// #
+// # functions
 
-const cardContainer = document.getElementById("card-row");
-
-let cardHtml = ``;
-
-function cardHtmlGenerator(name, role, img) {
-  return;
-  `<div class="card d-flex">
-  <div>
-    <img src="./img/female1.png" class="card-img" alt="" />
+function cardHtmlGenerator(name, role, email, img) {
+  return `<div class="card d-flex">
+  <div class="card-img-container">
+    <img src="./${img}" class="card-img" alt="" />
   </div>
   <div class="card-text">
-    <div class="card-name">name</div>
-    <div class="card-role">role</div>
-    <div class="card-contact">mail</div>
+    <div class="card-name">${name}</div>
+    <div class="card-role">${role}</div>
+    <div class="card-contact">${email}</div>
   </div>
 </div>`;
 }
+
+// # elements
+
+const cardContainer = document.getElementById("card-container");
+
+let cardHtml = ``;
+
+teamMembers.forEach((member) => {
+  let memberCard = cardHtmlGenerator(
+    member.name,
+    member.role,
+    member.email,
+    member.img
+  );
+  cardHtml += memberCard;
+});
+
+cardContainer.innerHTML = cardHtml;
