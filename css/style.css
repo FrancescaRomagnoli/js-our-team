@@ -60,11 +60,12 @@ body {
 .card-row {
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
   background-color: rgb(39, 39, 39);
-  width: 30%;
+  width: 420px;
   color: white;
 }
 
